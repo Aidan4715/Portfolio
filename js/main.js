@@ -18,7 +18,7 @@
      --------------------------------------------------------- */
   var ROLES = [
     'cs student @ csuf',
-    'future software developer',
+    'future full-stack engineer',
     'class of 2028'
   ];
 
