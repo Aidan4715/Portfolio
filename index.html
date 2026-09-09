@@ -110,22 +110,26 @@
           <span class="win__file mono">aidan.py</span>
           <span class="win__badge mono">PY</span>
         </div>
-        <pre class="win__body"><code><span class="c-key">struct</span> <span class="c-fn">Developer</span> {
-    <span class="c-prop">name</span>: <span class="c-fn">String</span>,
-    <span class="c-prop">school</span>: <span class="c-fn">String</span>,
-    <span class="c-prop">grad_year</span>: <span class="c-fn">u16</span>,
-    <span class="c-prop">stack</span>: <span class="c-fn">Vec</span>&lt;<span class="c-fn">&amp;str</span>&gt;,
-}
 
-<span class="c-key">let</span> <span class="c-var">aidan</span> <span class="c-op">=</span> <span class="c-fn">Developer</span> {
-    <span class="c-prop">name</span>: <span class="c-str">&quot;Aidan Joshi&quot;</span>.<span class="c-fn">into</span>(),
-    <span class="c-prop">school</span>: <span class="c-str">&quot;CSU Fullerton&quot;</span>.<span class="c-fn">into</span>(),
-    <span class="c-prop">grad_year</span>: <span class="c-num">2028</span>,
-    <span class="c-prop">stack</span>: <span class="c-fn">vec!</span>[<span class="c-str">&quot;Rust&quot;</span>, <span class="c-str">&quot;Python&quot;</span>, <span class="c-str">&quot;C++&quot;</span>],
-};
+                <pre class="win__body"><code><span class="c-key">from</span> dataclasses <span class="c-key">import</span> dataclass
 
-<span class="c-com">// building projects, taking classes,</span>
-<span class="c-com">// and looking for a summer 2027 internship.</span></code></pre>
+<span class="c-op">@</span><span class="c-fn">dataclass</span>
+<span class="c-key">class</span> <span class="c-fn">Developer</span>:
+    <span class="c-prop">name</span>: <span class="c-fn">str</span>
+    <span class="c-prop">school</span>: <span class="c-fn">str</span>
+    <span class="c-prop">grad_year</span>: <span class="c-fn">int</span>
+    <span class="c-prop">stack</span>: <span class="c-fn">list</span>[<span class="c-fn">str</span>]
+
+
+<span class="c-var">aidan</span> <span class="c-op">=</span> <span class="c-fn">Developer</span>(
+    <span class="c-prop">name</span><span class="c-op">=</span><span class="c-str">&quot;Aidan Joshi&quot;</span>,
+    <span class="c-prop">school</span><span class="c-op">=</span><span class="c-str">&quot;CSU Fullerton&quot;</span>,
+    <span class="c-prop">grad_year</span><span class="c-op">=</span><span class="c-num">2028</span>,
+    <span class="c-prop">stack</span><span class="c-op">=</span>[<span class="c-str">&quot;Python&quot;</span>, <span class="c-str">&quot;SQL&quot;</span>, <span class="c-str">&quot;C++&quot;</span>],
+)
+
+<span class="c-com"># building projects, taking classes,</span>
+<span class="c-com"># and looking for a summer 2027 internship.</span></code></pre>
       </div>
     </div>
   </div>
