@@ -732,7 +732,9 @@ button {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
   gap: 20px;
+  align-items: start;
 }
+
 .proj--big { grid-column: 1 / -1; }
 
 .proj {
@@ -814,7 +816,6 @@ button {
 .proj__desc {
   color: var(--muted);
   font-size: .93rem;
-  flex: 1;
 }
 .proj--big .proj__desc { max-width: 62ch; font-size: 1rem; }
 
@@ -934,7 +935,11 @@ button {
   margin: 14px 0 18px;
   display: grid;
   gap: 8px;
+  align-content: start;
 }
+/* cards stretch to the tallest in the row; let the slack collect above the
+   chips instead of inflating the gap under the description */
+.proj .chips { margin-top: auto; }
 .proj__bullets li {
   position: relative;
   padding-left: 20px;
